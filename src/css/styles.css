@@ -1,0 +1,63 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  grid-column: span 2;
+}
+
+.chart_header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  height: 2%;
+}
+
+.main-content {
+  background-color: #f2f2f2;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+}
+
+.lmap {
+  height: 60%;
+  width: 100%;
+  background-color: #ccc;
+  --bs-gutter-x: 0;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px;
+  height: 39%;
+}
+
+.chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* width: calc(80% - 100px); */
+}
