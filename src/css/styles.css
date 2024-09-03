@@ -7,9 +7,8 @@ html {
 }
 
 .container-fluid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
   height: 100%;
 }
 
@@ -18,46 +17,52 @@ header {
   color: #fff;
   padding: 10px;
   text-align: center;
-  grid-column: span 2;
-}
-
-.chart_header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  height: 2%;
+  flex-shrink: 0;
 }
 
 .main-content {
-  background-color: #f2f2f2;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   overflow: hidden;
-  position: relative;
-  padding: 0;
 }
 
 .lmap {
-  height: 60%;
-  width: 100%;
+  flex: 1;
   background-color: #ccc;
-  --bs-gutter-x: 0;
 }
 
 .charts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  margin: 10px;
-  height: 39%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  height: 50%;
 }
 
 .chart {
+  flex: 1;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* width: calc(80% - 100px); */
+}
+
+/* Responsive design for tablets and mobile */
+@media (min-width: 768px) {
+  .charts {
+    flex-direction: row;
+  }
+
+  .chart {
+    flex: 1;
+    min-width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .chart {
+    min-height: 200px;
+  }
 }

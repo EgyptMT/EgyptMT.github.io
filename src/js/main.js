@@ -576,6 +576,7 @@ option2 = {
             name: 'Density (kg/m³)',
             type: 'value',
             nameLocation: 'middle',
+            splitLine: { show: false },// Disable grid lines for Density x-axis
 
             position: 'top',
             axisLabel: {
@@ -602,6 +603,7 @@ option2 = {
             type: 'value',
             position: 'bottom',
             nameLocation: 'middle',
+            splitLine: { show: false }, // Disable grid lines for Density x-axis
 
             offset: 0,
             axisLabel: {
