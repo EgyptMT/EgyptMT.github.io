@@ -575,14 +575,15 @@ option2 = {
         {
             name: 'Density (kg/m³)',
             type: 'value',
-            nameLocation: 'middle',
+            nameLocation: 'none',
             splitLine: { show: false },// Disable grid lines for Density x-axis
-
+            axisLabel: {
+                show: false  // Hide labels for Magnetics x-axis
+            },
             position: 'top',
             axisLabel: {
                 formatter: '{value}',
                 color: '#33CC33' // Green color for Density labels
-
 
             },
             nameTextStyle: {
@@ -599,12 +600,14 @@ option2 = {
 
         },
         {
-            name: 'Magnetics (nT)',
+            name: 'Magnetics (SI)',
             type: 'value',
             position: 'bottom',
-            nameLocation: 'middle',
+            nameLocation: 'none',
             splitLine: { show: false }, // Disable grid lines for Density x-axis
-
+            axisLabel: {
+                show: false  // Hide labels for Magnetics x-axis
+            },
             offset: 0,
             axisLabel: {
                 formatter: '{value}',
